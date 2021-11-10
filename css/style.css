@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+:root {
+    --azul: rgb(27 43 75);
+    --azul-transparente: rgba(9, 14, 24, 0.7);
+    --blanco: #eee;
+    --amarillo: rgb(254 190 1);
+    --fuente-titular: 'Zen Maru Gothic', sans-serif;
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    transition: .2s linear;
+    font-family: var(--fuente-titular);
+}
+
+html {
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------------- CABECERA -------------------------------------------------------------- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: var(--azul);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    box-shadow: 0 1px 20px 1px #222;
+}
+
+.image a img {
+    height: 80px;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar > ul{
+    display: flex;
+}
+
+.navbar > ul > li {
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+    position: relative;
+
+}
+
+li a {
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+li a:hover {
+    color: var(--amarillo);
+    border-bottom: 1px solid var(--amarillo);
+    padding-bottom: .3rem;
+}
+
+.navbar > ul > li > ul {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background: var(--azul);
+    width: 19rem;
+    padding-top: 2rem;
+}
+
+.navbar > ul > li > ul > li {
+    padding: 1rem;
+}
+
+.navbar > ul > li.desplegable:hover > ul {
+    display: block;
+
+} 
+
+a.menu,
+a.cerrar {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    display: none;
+}
+
+a.menu:hover,
+a.cerrar:hover {
+    color: var(--amarillo);
+}
+
+/* ------------------------------------------------------- HERO -------------------------------------------------------------- */
+
+.hero {
+    min-height: 100vh;
+    background: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+.box-hero {
+    padding: 3rem;
+    border: 1px solid var(--azul);
+    border-radius: 10px 10px 0 0;
+    background: var(--azul-transparente);
+
+    /* Nuevo */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+}
+
+.box-hero h1 {
+    margin-top: 7rem;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--amarillo);
+    padding-bottom: 1rem;
+}
+
+.box-hero p {
+    color: var(--blanco);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: .95rem;
+    text-align: center;
+}
+
+/* ------------------------------------------------------- CURSOS -------------------------------------------------------------- */
+
+article {
+    padding: 3rem 7%;
+}
+
+.titulo {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--azul);
+    padding-bottom: 1rem;
+}
+
+.cursos p {
+    font-size: 1.15rem;
+    text-align: center;
+    /* text-transform: uppercase; */
+    padding-bottom: 2rem;
+    /* font-weight: 500; */
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+}
+
+.box-curso {
+    height: 350px;
+    background: url('../images/ingles-pic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.box-curso--interno {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    background: var(--azul-transparente);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid transparent;
+}
+
+.box-curso a {
+    color: var(--blanco);
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+
+.box-curso--interno:hover {
+    border: 5px solid var(--amarillo);
+}
+
+.box-curso:hover a h3 {
+    color: var(--amarillo);
+    border-bottom: 1px solid var(--amarillo);
+    padding-bottom: .3rem;
+}
+
+/* ------------------------------------------------------- MI LIBRO -------------------------------------------------------------- */
+
+.mi-libro .contenedor {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.contenedor .box-texto {
+    flex: 2 1 30rem;
+    font-size: 1.15rem;
+}
+
+.contenedor .box-texto p {
+    padding-bottom: 1rem;
+}
+
+.contenedor .box-texto ul li {
+    margin-left: 3rem;
+    list-style: disc;
+}
+
+.contenedor .box-image {
+    flex: 1 1 30rem;
+}
+
+.contenedor .box-image img {
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    display: block;
+    /* width: 20%; */
+    width: 10rem;
+    background: var(--azul);
+    color: var(--blanco);
+    text-align: center;
+    padding: .5rem .5rem;
+    margin: 1rem auto;
+}
+
+.btn:hover {
+    color: var(--amarillo);
+}
+
+/* ------------------------------------------------------- RECURSOS -------------------------------------------------------------- */
+
+.recursos p {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+}
+
+/* ------------------------------------------------------- FAQ -------------------------------------------------------------- */
+
+summary {
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+details {
+    border: 1px solid #222;
+    padding: 1rem;
+
+}
+
+details ul li {
+    margin-left: 2.5rem;
+    list-style: disc;
+}
+
+/* ------------------------------------------------------- CONTACTO -------------------------------------------------------------- */
+
+.container-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3.5rem 4rem;
+    border: 3px solid #222;
+}
+
+.inputBox {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #222;
+}
+
+.inputBox:last-child {
+    border: none;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: .2rem .9rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: none;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: var(--azul);
+}
+
+.inputBox textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    padding: .2rem .9rem;
+    font-size: 1.2rem;  /* Si no le pongo el mismo tamaño de fuente a todos, me queda de distinto tamaño */
+    text-transform: none;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: var(--azul);
+
+}
+
+.inputBox span {
+    color: var(--azul);
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+input::placeholder,
+textarea::placeholder{
+    font-weight: 400;
+    color: var(--amarillo);
+}
+
+form .btn {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------- FOOTER -------------------------------------------------------------- */
+
+.footer {
+    background: var(--azul);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.rsociales {
+    font-size: 2rem;
+
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.rsociales a {
+    margin-right: 1rem;
+}
+
+.footer a:hover {
+    color: var(--amarillo);
+}
+
+.rsociales a:last-child {
+    margin-right: 0;
+}
+
+.copy {
+    display: flex;
+    gap: 1rem;
+}
+
+/* -------------------------------------------------- @MEDIA ----------------------------------------------------------------------- */
+
+@media screen and (max-width: 985px) {
+    .cursos .contenedor {
+        /* grid-template-columns: repeat(2, minmax(max-content, 1fr)); */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .navbar {
+        position: initial;
+    }
+    .navbar > ul {
+        display: none;
+        /* position: absolute; */
+        top: 80px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: var(--azul);
+        height: calc(100vh - 85px);
+        padding-top: 2rem;
+    }
+
+    .navbar > ul > li {
+        margin-bottom: 2rem;
+    }
+
+    a.menu,
+    a.cerrar {
+        display: block;
+    }
+    .navbar ul:target{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--azul);
+        height: 100vh;
+        z-index: 200;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .principal article .contenedor {
+        /* grid-template-columns: repeat(2, minmax(max-content, 1fr)); */
+        grid-template-columns: 1fr;
+
+    }
+
+    .box-curso {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .titulo {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 425px) {
+    .contenedor .box-image img{
+        width: 86%;
+    }
+    .container-form form {
+        padding: 3.5rem 2rem;
+    }
+
+    .copy {
+        padding-top: 1rem;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        gap: .1rem;
+    }
+    .copy span {
+        display: none;
+    }
+}
