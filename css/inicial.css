@@ -1,0 +1,83 @@
+:root {
+    --azul: rgb(27 43 75);
+    /* --azul-transparente: rgba(9, 14, 24, 0.9); */
+    --azul-transparente-sec: rgba(9, 14, 24, 0.85);
+    --blanco: #eee;
+    --amarillo: rgb(254 190 1);
+    --fuente-titular: 'Zen Maru Gothic', sans-serif;
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+
+a {
+    text-decoration: none;
+    /* color: var(--blanco); */
+    color: var(--azul);
+
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.cursos p {
+    text-align: left;
+}
+
+.cursos .contenedor-curso {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.box-clase {
+    height: 320px;
+    padding-top: 2rem;
+    border: 3px solid rgb(252 40 38);
+    color: var(--azul);
+    overflow: hidden;
+}
+
+.box-clase img {
+    margin-bottom: 1.5rem;
+}
+
+.box-clase:hover {
+    border-color: var(--amarillo);
+}
+
+.box-clase:hover a {
+    color: var(--amarillo);
+}
+
+.box-clase h3 {
+    height: 100px;
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.5;
+    padding: .5rem 1.5rem 3rem;
+    background: var(--azul);
+    color: var(--blanco);
+
+}
+
+@media (max-width: 1108px) { /* Agregar 18px al valor que deseo */
+    .principal .cursos div.contenedor-curso {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
+
+@media (max-width: 725px) { /* Agregar 18px al valor que deseo */
+    .principal .cursos div.contenedor-curso {
+        grid-template-columns: 320px;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
