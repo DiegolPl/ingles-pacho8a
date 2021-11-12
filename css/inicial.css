@@ -4,13 +4,13 @@
     --azul-transparente-sec: rgba(9, 14, 24, 0.85);
     --blanco: #eee;
     --amarillo: rgb(254 190 1);
+    --rojo: rgb(252 40 38);
     --fuente-titular: 'Zen Maru Gothic', sans-serif;
     --border: .1rem solid rgba(255,255,255,.3);
 }
 
 a {
     text-decoration: none;
-    /* color: var(--blanco); */
     color: var(--azul);
 
 }
@@ -36,7 +36,7 @@ img {
     height: 320px;
     color: var(--azul);
     border-radius: 7px;
-    border: 3px solid rgb(252 40 38);
+    border: 3px solid var(--rojo);
     overflow: hidden;
     box-shadow: 10px 10px 10px rgb(10,10,10,.5);
 }
@@ -44,7 +44,6 @@ img {
 .box-clase a {
     display: block;
     padding-top: 2rem;
-    /* width: 100%; */
     width: 320px;
     overflow: hidden;
     height: 100%;
@@ -68,7 +67,6 @@ img {
     color: var(--blanco);
     border: 3px solid var(--azul);
     transition: 0s color;
-    /* border-radius: 0 0 20px 20px;    */
 }
 
 .box-clase h3 span {
@@ -81,6 +79,42 @@ img {
 
 .box-clase a:hover img {
     transform: scale(1.05);
+}
+
+.contenedor-curso + p:last-of-type {
+    margin-top: 4rem;
+    padding-bottom: 0;
+}
+
+.contenedor-curso + p a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.contenedor-curso + p a:hover {
+    color: var(--amarillo);
+}
+
+.cursos > h3 {
+    text-align: center;
+    color: var(--azul);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.prueba > p {
+    margin-top: 1.5rem;
+}
+
+.cursos .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursos .video iframe {
+    border: 3px solid var(--rojo);
+    border-radius: 10px;
 }
 
 @media (max-width: 1108px) { /* Agregar 18px al valor que deseo */
