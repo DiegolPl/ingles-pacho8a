@@ -36,20 +36,14 @@ img {
     height: 320px;
     padding-top: 2rem;
     border: 3px solid rgb(252 40 38);
+    border-radius: 20px;
     color: var(--azul);
     overflow: hidden;
+    box-shadow: 10px 10px 10px rgb(10,10,10,.5);
 }
 
 .box-clase img {
     margin-bottom: 1.5rem;
-}
-
-.box-clase:hover {
-    border-color: var(--amarillo);
-}
-
-.box-clase:hover a {
-    color: var(--amarillo);
 }
 
 .box-clase h3 {
@@ -61,7 +55,20 @@ img {
     padding: .5rem 1.5rem 3rem;
     background: var(--azul);
     color: var(--blanco);
+    transition: 0s color;
+    
+}
 
+.box-clase h3 span {
+    transition: 0s color;
+}
+
+.box-clase a:hover h3 {
+    color: var(--amarillo);
+}
+
+.box-clase a:hover img {
+    transform: scale(1.05);
 }
 
 @media (max-width: 1108px) { /* Agregar 18px al valor que deseo */
@@ -71,6 +78,25 @@ img {
         align-content: center;
     }
 
+}
+
+@media screen and (max-width: 860px) {
+    .navbar > ul:target{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--azul);
+        height: 100vh;
+        padding-top: 2rem;
+        z-index: 200;
+    }
+
+    
 }
 
 @media (max-width: 725px) { /* Agregar 18px al valor que deseo */

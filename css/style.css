@@ -83,6 +83,10 @@ li a:hover {
     padding: 1rem;
 }
 
+.navbar > ul > li.desplegable {
+    cursor: pointer;
+}
+
 .navbar > ul > li.desplegable:hover > ul {
     display: block;
 
@@ -421,16 +425,7 @@ form .btn {
     }
     .navbar > ul {
         display: none;
-        /* position: absolute; */
-        top: 80px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        background: var(--azul);
-        height: calc(100vh - 85px);
-        padding-top: 2rem;
+        
     }
 
     .navbar > ul > li {
@@ -441,7 +436,7 @@ form .btn {
     a.cerrar {
         display: block;
     }
-    .navbar ul:target{
+    .navbar > ul:target{
         display: flex;
         position: absolute;
         top: 0;
@@ -452,13 +447,41 @@ form .btn {
         align-items: center;
         background: var(--azul);
         height: 100vh;
+        padding-top: 2rem;
         z-index: 200;
+        overflow-y: auto;
     }
+
+    .navbar > ul:target > li.desplegable {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .navbar > ul:target > li.desplegable > ul {
+        display: none;
+    }
+
+    .navbar > ul:target > li.desplegable--click > ul{
+        position: relative;
+        top: 0;
+        left: 40%;
+        display: block;
+        background: var(--azul);
+        width: 19rem;
+        padding-top: 1rem;
+    }
+
+    .navbar > ul:target > li.desplegable--click > ul > li::before {
+        content: "- ";
+        color: var(--blanco);
+    }
+
 }
 
 @media screen and (max-width: 770px) {
     .principal article .contenedor {
-        /* grid-template-columns: repeat(2, minmax(max-content, 1fr)); */
         grid-template-columns: 1fr;
 
     }
@@ -485,7 +508,6 @@ form .btn {
     .copy {
         padding-top: 1rem;
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         gap: .1rem;
     }

@@ -18,7 +18,8 @@
             <ul id="menu">
                 <a href="#" class="far fa-window-close cerrar"></a>
                 <li><a href="#hero" class="menu-link">Inicio</a></li>
-                <li class="desplegable"><a href="index.html#cursos" class="menu-link">Cursos</a>
+                <!-- Saco los href de los link con desplegables para evitar el redireccionamiento -->
+                <li class="desplegable" id="cursos-link-li"><a class="menu-link" id="cursos-link">Cursos</a>
                     <ul>
                         <li><a href="#">Curso Inicial de Inglés</a></li>    <!-- En cada uno tendra cursos complementarios - No veo necesario ponerlos en el menu -->
                         <li><a href="#">Curso Básico de Inglés</a></li>
@@ -27,7 +28,7 @@
                     </ul>
                 </li>
                 <li><a href="index.html#mi-libro" class="menu-link">Mi Libro</a></li>
-                <li class="desplegable"><a href="index.html#recursos" class="menu-link">Recursos</a>
+                <li class="desplegable" id="recursos-link-li"><a class="menu-link" id="recursos-link">Recursos</a>
                 <ul>
                     <li><a href="#">Lista de Verbos</a></li>
                     <li><a href="#">Herramientas de práctica</a></li>
@@ -118,19 +119,48 @@
     </main>
     <footer class="footer">
         <div class="rsociales">
-            <a href="#" class="fab fa-youtube"></a>
-            <a href="#" class="fab fa-facebook"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-telegram"></a>
-            <a href="#" class="fab fa-android"></a>
-            <a href="#" class="fab fa-apple"></a>
+            <a href="https://www.youtube.com/channel/UCTplas1aEhuhBLFYpxr299g" class="fab fa-youtube" target="_blank"></a>
+            <a href="https://www.facebook.com/franciscoochoaingles/" class="fab fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/pacho8a/" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://t.me/inglesfcilpacho8a" class="fab fa-telegram" target="_blank"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.vieraacademy.inglesfacil" class="fab fa-android" target="_blank"></a>
+            <a href="https://apps.apple.com/us/app/ingles-facil/id1492827096" class="fab fa-apple" target="_blank"></a>
         </div>
         <div class="copy">
             <a href="#" class="legal">Aviso Legal</a> 
             <span> - </span>
             <p>Derechos reservados a Francisco Ochoa</p>
-            
         </div>
     </footer>
+
+    <script>
+        let btn_recursosLink = document.getElementById('recursos-link');
+        let btn_cursosLink = document.getElementById('cursos-link');
+        let btn_menu = document.getElementById('menu-btn');
+        let li_recursosLink = document.getElementById('recursos-link-li');
+        let li_cursosLink = document.getElementById('cursos-link-li');
+
+        btn_menu.addEventListener('click', ()=> {
+            if(li_cursosLink.classList.contains('desplegable--click')){
+                li_cursosLink.classList.remove('desplegable--click');
+            }
+            if(li_recursosLink.classList.contains('desplegable--click')){
+                li_recursosLink.classList.remove('desplegable--click');
+            }
+        })
+
+        btn_recursosLink.addEventListener('click', ()=> {
+            if(li_cursosLink.classList.contains('desplegable--click')){
+                li_cursosLink.classList.remove('desplegable--click');
+            }
+            li_recursosLink.classList.toggle('desplegable--click');
+        })
+        btn_cursosLink.addEventListener('click', ()=> {
+            if(li_recursosLink.classList.contains('desplegable--click')){
+                li_recursosLink.classList.remove('desplegable--click');
+            }
+            li_cursosLink.classList.toggle('desplegable--click');
+        })
+    </script>
 </body>
 </html>

@@ -1,1 +1,1 @@
-- Arreglar las listas q aparecen con hover en el menu al usar el boton 'menu'
+- Arreglar las listas q aparecen con hover en el menu al usar el boton 'menu' - LISTO
