@@ -45,7 +45,8 @@ img {
 .box-clase a {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 320px;
+    overflow: hidden;
     background: var(--azul);
 }
 
@@ -56,12 +57,12 @@ img {
 }
 
 .box-clase h3 {
-    height: 102px;
-    width: 100%;
+    height: 110px;
+    width: 102%;
     font-size: 1.1rem;
     text-align: center;
     line-height: 1.5;
-    padding: .5rem 1.5rem 3rem;
+    padding: .5rem 1rem 3rem;
     background: var(--azul);
     color: var(--blanco);
     transition: 0s color;
