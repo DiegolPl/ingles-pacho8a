@@ -114,7 +114,8 @@ a.cerrar:hover {
     min-height: 100vh;
     background: url('../images/bg.png');
     background-repeat: no-repeat;
-    background-position: cover;
+    background-position: center;
+    background-size: cover;
 }
 
 .box-hero {
