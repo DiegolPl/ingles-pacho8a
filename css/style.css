@@ -315,6 +315,7 @@ details ul li {
     justify-content: flex-start;
     padding: 3.5rem 4rem;
     border: 3px solid #222;
+    /* background-color: var(--azul); */
 }
 
 .inputBox {
@@ -347,25 +348,26 @@ details ul li {
     width: 100%;
     height: 150px;
     padding: .2rem .9rem;
+    font-weight: 500;
     font-size: 1.2rem;  /* Si no le pongo el mismo tamaño de fuente a todos, me queda de distinto tamaño */
     text-transform: none;
     background: transparent;
     outline: none;
     border: none;
     color: var(--azul);
-
 }
 
-.inputBox span {
+.inputBox label {
     color: var(--azul);
-    font-size: 1.5rem;
+    /* color: var(--blanco); */
+    font-size: .95rem;
     padding-left: 2rem;
 }
 
 input::placeholder,
 textarea::placeholder{
     font-weight: 400;
-    color: var(--amarillo);
+    color: #555;
 }
 
 form .btn {
