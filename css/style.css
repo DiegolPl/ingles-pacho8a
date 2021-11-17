@@ -170,9 +170,7 @@ article {
 .cursos p {
     font-size: 1.15rem;
     text-align: center;
-    /* text-transform: uppercase; */
     padding-bottom: 2rem;
-    /* font-weight: 500; */
 }
 
 .contenedor {
@@ -360,7 +358,6 @@ details ul li {
 
 .inputBox label {
     color: var(--azul);
-    /* color: var(--blanco); */
     font-size: .95rem;
     padding-left: 2rem;
 }
