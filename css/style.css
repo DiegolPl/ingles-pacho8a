@@ -315,7 +315,8 @@ details ul li {
     justify-content: flex-start;
     padding: 3.5rem 4rem;
     border: 3px solid #222;
-    /* background-color: var(--azul); */
+    box-shadow: 10px 10px 10px rgb(10,10,10,.4);
+
 }
 
 .inputBox {
