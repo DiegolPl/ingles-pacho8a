@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 1 - Curso Inicial</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/inicial.css">
+    <link rel="stylesheet" href="../css/leccion.css">
+    <script src="https://kit.fontawesome.com/ce9b7d4b36.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="image">
+            <a href="index.html"><img src="../images/ingles-facil.png" alt=""></a>
+        </div>
+        <nav class="navbar">
+            <ul id="menu">
+                <a href="#" class="far fa-window-close cerrar"></a>
+                <li><a href="#hero" class="menu-link">Inicio</a></li>
+                <!-- Saco los href de los link con desplegables para evitar el redireccionamiento -->
+                <li class="desplegable" id="cursos-link-li"><a class="menu-link" id="cursos-link">Cursos</a>
+                    <ul>
+                        <li><a href="../inicial.html">Curso Inicial</a></li>    <!-- En cada uno tendra cursos complementarios - No veo necesario ponerlos en el menu -->
+                        <li><a href="../basico.html">Curso Básico</a></li>
+                        <li><a href="#">Curso Intermedio</a></li>
+                        <li><a href="#">Curso Avanzado</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#mi-libro" class="menu-link">Mi Libro</a></li>
+                <li class="desplegable" id="recursos-link-li"><a class="menu-link" id="recursos-link">Recursos</a>
+                <ul>
+                    <li><a href="#">Lista de Verbos</a></li>
+                    <li><a href="#">Herramientas</a></li>
+                    <li><a href="#">Chats en vivo</a></li>
+                </ul></li>
+                <li><a href="../index.html#faq" class="menu-link">FAQ</a></li>
+                <li><a href="../index.html#contact" class="menu-link">Contacto</a></li>
+            </ul>
+            <a href="#menu" class="fas fa-bars menu" id="menu-btn"></a>
+        </nav>
+    </header>
+    <main class="principal">
+        <article class="cursos" id="cursos">
+            <h2 class="titulo">Curso Inicial - Lección 1</h2>
+            <h3>Pronombres personales y Verbo TO BE presente afirmativo</h3>
+            <p>Te doy la bienvenida a este nuevo curso de inglés "Inglés desde CERO" para principiantes. Si no sabes nada de inglés o ha sido muy difícil para ti aprenderlo, te recomiendo entonces este curso. Aprenderás de una forma fácil y sencilla a manejar todas las estructuras gramaticales básicas del inglés. Este primer curso estará diseñado solamente para el presente en inglés.</p>
+            <p>En este primer video iniciaremos identificando cuales son los pronombres personales en inglés y el verbo to be en presente. Haremos algunos ejercicios de práctica combinando los pronombres y el verbo TO BE.</p>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Cq_9hh42PgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3 class="recursos">Guía de práctica y Resultados</h3>
+            <p>Aquí te dejo la guía para esta primer lección, en Excel y en formato PDF para que descargues el más apropiado para tí:</p>
+            <div class="box-recursos">
+                <a href="https://www.pacho8a.com/app/download/10340371670/LECCI%C3%93N+1+-+PRONOMBRES+PERSONALES+Y+VERBO+TO+BE.xlsx?t=1624366673" class="btn-recurso"><img src="../images/xlsx.png" alt=""></a>
+                <a href="https://www.pacho8a.com/app/download/10340371770/LECCI%C3%93N+1+-+PRONOMBRES+PERSONALES+Y+VERBO+TO+BE.pdf?t=1635522661" class="btn-recurso"><img src="../images/pdf.png" alt=""></a>
+            </div>
+        </article>
+        <nav class="mini-menu">
+            <a href="../inicial.html" class="btn">Curso Inicial</a>
+            <a href="#" class="btn">Lección 2</a>
+        </nav>
+    </main>
+    <footer class="footer">
+        <div class="rsociales">
+            <a href="https://www.youtube.com/channel/UCTplas1aEhuhBLFYpxr299g" class="fab fa-youtube" target="_blank"></a>
+            <a href="https://www.facebook.com/franciscoochoaingles/" class="fab fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/pacho8a/" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://t.me/inglesfcilpacho8a" class="fab fa-telegram" target="_blank"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.vieraacademy.inglesfacil" class="fab fa-android" target="_blank"></a>
+            <a href="https://apps.apple.com/us/app/ingles-facil/id1492827096" class="fab fa-apple" target="_blank"></a>
+        </div>
+        <div class="copy">
+            <a href="#" class="legal">Aviso Legal</a> 
+            <span> - </span>
+            <p>Derechos reservados a Francisco Ochoa</p>
+        </div>
+    </footer>
+    <script src="../menu.js"></script>
+</body>
+</html>

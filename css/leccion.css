@@ -1,0 +1,44 @@
+body {
+    padding-top: 8vh;
+}
+
+.cursos p:first-of-type,
+.cursos p:last-of-type {
+    margin-top: 1.5rem;
+
+}
+
+h3.recursos {
+    margin-top: 2rem;
+}
+
+.box-recursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a.btn-recurso {
+    display: inline-block;
+    margin: 0 2rem;
+    border: 1px solid #222;
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    /* margin: 0 auto; */
+}
+
+a.btn-recurso:hover {
+    transform: scale(1.1);
+}
+
+.mini-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mini-menu a {
+    margin: 2rem;
+}
